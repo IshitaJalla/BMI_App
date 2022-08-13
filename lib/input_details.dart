@@ -11,6 +11,10 @@ class InputDetails extends StatefulWidget {
 
 class _InputDetailsState extends State<InputDetails> {
   Gender selectedCard = Gender.unselected;
+  int sliderHeight = 0;
+  int sliderWeight = 0;
+  int sliderAge = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,6 +150,50 @@ class _InputDetailsState extends State<InputDetails> {
               children: [
                 Expanded(
                   child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'HEIGHT',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Row(
+                          textBaseline: TextBaseline.ideographic,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              sliderHeight.toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const Text(
+                              'cm',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Slider(
+                          value: sliderHeight.toDouble(),
+                          min: 0.0,
+                          max: 280.0,
+                          onChanged: (value) {
+                            setState(() {
+                              sliderHeight = value.toInt();
+                            });
+                          },
+                          inactiveColor: Colors.white,
+                        ),
+                      ],
+                    ),
                     margin: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -163,6 +211,50 @@ class _InputDetailsState extends State<InputDetails> {
               children: [
                 Expanded(
                   child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'WEIGHT',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Row(
+                          textBaseline: TextBaseline.ideographic,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              sliderWeight.toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const Text(
+                              'kg',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Slider(
+                          value: sliderWeight.toDouble(),
+                          min: 0.0,
+                          max: 200.0,
+                          onChanged: (value) {
+                            setState(() {
+                              sliderWeight = value.toInt();
+                            });
+                          },
+                          inactiveColor: Colors.white,
+                        ),
+                      ],
+                    ),
                     margin: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -180,6 +272,50 @@ class _InputDetailsState extends State<InputDetails> {
               children: [
                 Expanded(
                   child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'AGE',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Row(
+                          textBaseline: TextBaseline.ideographic,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              sliderAge.toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const Text(
+                              'yrs',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Slider(
+                          value: sliderAge.toDouble(),
+                          min: 0,
+                          max: 100,
+                          onChanged: (value) {
+                            setState(() {
+                              sliderAge = value.toInt();
+                            });
+                          },
+                          inactiveColor: Colors.white,
+                        ),
+                      ],
+                    ),
                     margin: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),

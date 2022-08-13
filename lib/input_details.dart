@@ -35,9 +35,16 @@ class _InputDetailsState extends State<InputDetails> {
                       });
                     },
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: selectedCard == Gender.male
+                            ? Colors.cyan
+                            : Colors.lightBlueAccent,
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Icon(
                             FontAwesomeIcons.mars,
                             color: Colors.white,
@@ -55,13 +62,6 @@ class _InputDetailsState extends State<InputDetails> {
                           ),
                         ],
                       ),
-                      margin: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: selectedCard == Gender.male
-                            ? Colors.cyan
-                            : Colors.lightBlueAccent,
-                      ),
                     ),
                   ),
                 ),
@@ -73,9 +73,16 @@ class _InputDetailsState extends State<InputDetails> {
                       });
                     },
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: selectedCard == Gender.female
+                            ? Colors.cyan
+                            : Colors.lightBlueAccent,
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Icon(
                             FontAwesomeIcons.venus,
                             color: Colors.white,
@@ -93,13 +100,6 @@ class _InputDetailsState extends State<InputDetails> {
                           ),
                         ],
                       ),
-                      margin: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: selectedCard == Gender.female
-                            ? Colors.cyan
-                            : Colors.lightBlueAccent,
-                      ),
                     ),
                   ),
                 ),
@@ -111,9 +111,16 @@ class _InputDetailsState extends State<InputDetails> {
                       });
                     },
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: selectedCard == Gender.others
+                            ? Colors.cyan
+                            : Colors.lightBlueAccent,
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Icon(
                             FontAwesomeIcons.marsAndVenus,
                             color: Colors.white,
@@ -131,13 +138,6 @@ class _InputDetailsState extends State<InputDetails> {
                           ),
                         ],
                       ),
-                      margin: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: selectedCard == Gender.others
-                            ? Colors.cyan
-                            : Colors.lightBlueAccent,
-                      ),
                     ),
                   ),
                 ),
@@ -150,6 +150,11 @@ class _InputDetailsState extends State<InputDetails> {
               children: [
                 Expanded(
                   child: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.lightBlueAccent,
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -167,7 +172,7 @@ class _InputDetailsState extends State<InputDetails> {
                           children: [
                             Text(
                               sliderHeight.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold),
@@ -194,11 +199,6 @@ class _InputDetailsState extends State<InputDetails> {
                         ),
                       ],
                     ),
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlueAccent,
-                    ),
                   ),
                 ),
               ],
@@ -211,6 +211,11 @@ class _InputDetailsState extends State<InputDetails> {
               children: [
                 Expanded(
                   child: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.lightBlueAccent,
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -228,7 +233,7 @@ class _InputDetailsState extends State<InputDetails> {
                           children: [
                             Text(
                               sliderWeight.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold),
@@ -255,11 +260,6 @@ class _InputDetailsState extends State<InputDetails> {
                         ),
                       ],
                     ),
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlueAccent,
-                    ),
                   ),
                 ),
               ],
@@ -272,6 +272,11 @@ class _InputDetailsState extends State<InputDetails> {
               children: [
                 Expanded(
                   child: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.lightBlueAccent,
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -289,7 +294,7 @@ class _InputDetailsState extends State<InputDetails> {
                           children: [
                             Text(
                               sliderAge.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold),
@@ -315,11 +320,6 @@ class _InputDetailsState extends State<InputDetails> {
                           inactiveColor: Colors.white,
                         ),
                       ],
-                    ),
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlueAccent,
                     ),
                   ),
                 ),

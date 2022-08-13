@@ -1,3 +1,4 @@
+import 'package:bmi_testapp/result_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'enum_file.dart';
@@ -326,17 +327,29 @@ class _InputDetailsState extends State<InputDetails> {
               ],
             ),
           ),
-          Container(
-            color: Colors.blue,
-            height: 80,
-            width: double.infinity,
-            child: const Center(
-              child: Text(
-                'COMPUTE RESULT',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 20,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ResultView(
+                          height: sliderHeight,
+                          weight: sliderWeight,
+                        )),
+              );
+            },
+            child: Container(
+              color: Colors.blue,
+              height: 80,
+              width: double.infinity,
+              child: const Center(
+                child: Text(
+                  'COMPUTE RESULT',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ),

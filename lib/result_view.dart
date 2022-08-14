@@ -31,7 +31,7 @@ class _ResultViewState extends State<ResultView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'BMI RESULT',
               style: TextStyle(
                 fontSize: 30,
@@ -39,7 +39,7 @@ class _ResultViewState extends State<ResultView> {
             ),
             Text(
               '${bmiResult.toStringAsFixed(1)}',
-              style: TextStyle(fontSize: 40, color: Colors.blue),
+              style: const TextStyle(fontSize: 40, color: Colors.blue),
             ),
           ],
         ),

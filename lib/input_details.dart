@@ -19,9 +19,19 @@ class _InputDetailsState extends State<InputDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
+        title: const Text(
+          'BMI CALCULATOR',
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            color: Colors.white,
+            fontSize: 27,
+          ),
+        ),
+        elevation: 0,
         centerTitle: true,
+        backgroundColor: Colors.black,
       ),
       body: Column(
         children: [
@@ -40,8 +50,8 @@ class _InputDetailsState extends State<InputDetails> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: selectedCard == Gender.male
-                            ? Colors.cyan
-                            : Colors.lightBlueAccent,
+                            ? const Color(0xFF0A84FF)
+                            : const Color.fromARGB(255, 0, 94, 188),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -78,8 +88,8 @@ class _InputDetailsState extends State<InputDetails> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: selectedCard == Gender.female
-                            ? Colors.cyan
-                            : Colors.lightBlueAccent,
+                            ? const Color(0xFF0A84FF)
+                            : const Color.fromARGB(255, 0, 94, 188),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -116,8 +126,8 @@ class _InputDetailsState extends State<InputDetails> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: selectedCard == Gender.others
-                            ? Colors.cyan
-                            : Colors.lightBlueAccent,
+                            ? const Color(0xFF0A84FF)
+                            : const Color.fromARGB(255, 0, 94, 188),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -154,7 +164,7 @@ class _InputDetailsState extends State<InputDetails> {
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlueAccent,
+                      color: const Color(0xFF0A84FF),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -196,6 +206,7 @@ class _InputDetailsState extends State<InputDetails> {
                               sliderHeight = value.toInt();
                             });
                           },
+                          activeColor: Colors.black,
                           inactiveColor: Colors.white,
                         ),
                       ],
@@ -215,7 +226,7 @@ class _InputDetailsState extends State<InputDetails> {
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlueAccent,
+                      color: const Color(0xFF0A84FF),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -257,6 +268,7 @@ class _InputDetailsState extends State<InputDetails> {
                               sliderWeight = value.toInt();
                             });
                           },
+                          activeColor: Colors.black,
                           inactiveColor: Colors.white,
                         ),
                       ],
@@ -276,7 +288,7 @@ class _InputDetailsState extends State<InputDetails> {
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlueAccent,
+                      color: const Color(0xFF0A84FF),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -318,6 +330,7 @@ class _InputDetailsState extends State<InputDetails> {
                               sliderAge = value.toInt();
                             });
                           },
+                          activeColor: Colors.black,
                           inactiveColor: Colors.white,
                         ),
                       ],
@@ -339,16 +352,19 @@ class _InputDetailsState extends State<InputDetails> {
               );
             },
             child: Container(
-              color: Colors.blue,
               height: 80,
-              width: double.infinity,
+              width: 350,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                color: const Color.fromARGB(255, 0, 94, 188),
+              ),
               child: const Center(
                 child: Text(
                   'COMPUTE RESULT',
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w400,
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 27,
                   ),
                 ),
               ),

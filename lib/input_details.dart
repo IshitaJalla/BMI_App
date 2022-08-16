@@ -50,8 +50,8 @@ class _InputDetailsState extends State<InputDetails> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: selectedCard == Gender.male
-                            ? const Color(0xFF0A84FF)
-                            : const Color.fromARGB(255, 0, 94, 188),
+                            ? const Color(0xFF8E05C2)
+                            : const Color(0xFF3E065F),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -88,8 +88,8 @@ class _InputDetailsState extends State<InputDetails> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: selectedCard == Gender.female
-                            ? const Color(0xFF0A84FF)
-                            : const Color.fromARGB(255, 0, 94, 188),
+                            ? const Color(0xFF8E05C2)
+                            : const Color(0XFF3E065F),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -126,8 +126,8 @@ class _InputDetailsState extends State<InputDetails> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: selectedCard == Gender.others
-                            ? const Color(0xFF0A84FF)
-                            : const Color.fromARGB(255, 0, 94, 188),
+                            ? const Color(0xFF8E05C2)
+                            : const Color(0xFF3E065F),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -164,7 +164,7 @@ class _InputDetailsState extends State<InputDetails> {
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xFF0A84FF),
+                      color: const Color(0xFF8E05C2),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -226,7 +226,7 @@ class _InputDetailsState extends State<InputDetails> {
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xFF0A84FF),
+                      color: const Color(0xFF8E05C2),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -288,7 +288,7 @@ class _InputDetailsState extends State<InputDetails> {
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xFF0A84FF),
+                      color: const Color(0xFF8E05C2),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -356,7 +356,7 @@ class _InputDetailsState extends State<InputDetails> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
-                color: const Color.fromARGB(255, 0, 94, 188),
+                color: const Color(0xFF3E065F),
               ),
               child: const Center(
                 child: Text(

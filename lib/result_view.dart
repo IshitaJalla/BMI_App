@@ -31,53 +31,62 @@ class _ResultViewState extends State<ResultView> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               'YOUR BMI RESULT',
               style: TextStyle(
                 fontSize: 40,
                 color: Colors.white,
+                height: 3.5,
               ),
             ),
             if (bmiResult > 24.9) ...[
-              const Text(
-                'OVERWEIGHT',
-                style: TextStyle(color: Colors.orange, fontSize: 20),
-              ),
               Text(
                 '${bmiResult.toStringAsFixed(1)}',
-                style: const TextStyle(fontSize: 70, color: Colors.orange),
+                style: const TextStyle(
+                    fontSize: 90, color: Colors.orange, height: 2),
+              ),
+              const Text(
+                'OVERWEIGHT',
+                style:
+                    TextStyle(color: Colors.orange, fontSize: 30, height: 1.7),
               ),
               const Text(
                 'You should exercise more and follow a healthy diet.',
-                style: TextStyle(color: Colors.white),
+                style:
+                    TextStyle(color: Colors.white, fontSize: 17, height: 2.5),
               )
             ] else if (bmiResult > 18.5 && bmiResult < 24.9) ...[
-              const Text(
-                'NORMAL',
-                style: TextStyle(color: Colors.green, fontSize: 20),
-              ),
               Text(
                 '${bmiResult.toStringAsFixed(1)}',
-                style: const TextStyle(fontSize: 70, color: Colors.green),
+                style: const TextStyle(
+                    fontSize: 90, color: Colors.green, height: 2),
+              ),
+              const Text(
+                'NORMAL',
+                style:
+                    TextStyle(color: Colors.green, fontSize: 30, height: 1.7),
               ),
               const Text(
                 'You are healthy :)',
-                style: TextStyle(color: Colors.white),
+                style:
+                    TextStyle(color: Colors.white, fontSize: 20, height: 2.5),
               )
             ] else ...[
-              const Text(
-                'UNDERWEIGHT',
-                style: TextStyle(color: Colors.orange, fontSize: 20),
-              ),
               Text(
                 '${bmiResult.toStringAsFixed(1)}',
-                style: const TextStyle(fontSize: 70, color: Colors.orange),
+                style: const TextStyle(
+                    fontSize: 90, color: Colors.orange, height: 2),
               ),
               const Text(
-                'You should eat more according to your body requirements',
-                style: TextStyle(color: Colors.white),
+                'UNDERWEIGHT',
+                style:
+                    TextStyle(color: Colors.orange, fontSize: 30, height: 1.7),
+              ),
+              const Text(
+                'You should eat more food that gives you nutrition',
+                style:
+                    TextStyle(color: Colors.white, fontSize: 17, height: 2.5),
               )
             ],
           ],
